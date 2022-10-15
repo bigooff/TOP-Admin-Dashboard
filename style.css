@@ -63,7 +63,7 @@ h3{
 input[type=search]{
     padding: 0 1rem;
     border: none;
-    background-image: linear-gradient(#d8dee7,#bac1cc);
+    background-image: linear-gradient(#d8dee7c2,#bac1ccbb);
     border-radius: 1rem;
 }
 input[type=search]:focus{
@@ -83,12 +83,6 @@ input[type=search]:focus{
     transform: scale(1.25);
 }
 
-/***************/
-
-
-
-
-
 
 /* SIDERBAR */
 .sticky-container{
@@ -101,7 +95,7 @@ input[type=search]:focus{
     row-gap: 5rem;
 }
 .sidebar{
-    background-color: #6b21a8;
+    background-color:#6b21a8;
     position: relative;
     padding: 2rem;
     grid-column: 1/2;
@@ -157,7 +151,7 @@ li{
     transform: scale(1.1);
     color: rgba(255, 255, 255, 0.719);
 }
-/***************/
+
 
 /* MAIN-CONTENT */
 .main-content{
@@ -204,13 +198,16 @@ li{
 
 
 .announcements{
-    padding: 0.5rem;
+    padding: 2rem;
     grid-column: 1/2;
     grid-row: 2/3;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3,1fr);
     gap: 10px;
+}
+.announcements div,p{
+    padding: 6px;
 }
 .announcements > :nth-child(1){
     border-bottom: 1px solid rgba(158, 158, 158, 0.651);
@@ -227,11 +224,25 @@ li{
 }
 .card{
     background-color: white;
-    border-radius: 6px;
-    padding: 1rem;
+    border-radius: 8px;
+    /* padding: 1rem; */
     box-shadow: 2px 2px 4px  #758396d5;
     font-weight: 200;
 }
 .basic-card{
     display: grid;
+    grid-template-columns: 3% 97%;
+}
+.basic-card h3{
+    grid-column: 2/3;
+    align-self: flex-end;
+}
+.basic-card .purple{
+    grid-row: 1/4;
+    background-color:#6b21a8;
+    border-radius: 8px 0  0 8px;
+}
+.basic-card p{
+    grid-column: 2/3;
+    grid-row: 2/3;
 }
