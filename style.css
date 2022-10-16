@@ -11,7 +11,7 @@ body{
     overflow-x: hidden;
 }
 
-ul,li,p,h3,h1,a{
+ul,li,p,h3,h1,a,h6{
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -21,6 +21,10 @@ h1{
 }
 h3{
     font-size: 14px;
+}
+h3:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .container{
@@ -171,7 +175,7 @@ li{
     grid-row: 1/2;
     display: grid;
     grid-template-columns: 2fr 2fr;
-    grid-template-rows: 10% repeat(3, 1fr);
+    grid-template-rows: 5% repeat(3, 1fr);
     gap: 24px;
 }
 .left-container > h1{
@@ -185,13 +189,19 @@ li{
     grid-row: 1/2;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 10% repeat(2,1fr);
+    grid-template-rows: 5% 1fr 5% 1fr;
     gap: 24px;
 }
 
-.right-container > h1{
-    grid-column: 1/-1;
+.announceHead{
+    grid-column: 1/2;
     grid-row: 1/2;
+    align-self: flex-end;
+    
+}
+.trendingHead{
+    grid-column: 1/-1;
+    grid-row: 3/4;
     align-self: flex-end;
 }
 
@@ -218,31 +228,77 @@ li{
  
 .trending{
     grid-column: 1/2;
-    grid-row: 3/4;
+    grid-row: 4/5;
     display: grid;
-
 }
 .card{
     background-color: white;
     border-radius: 8px;
-    /* padding: 1rem; */
     box-shadow: 2px 2px 4px  #758396d5;
     font-weight: 200;
 }
+
 .basic-card{
     display: grid;
     grid-template-columns: 3% 97%;
-}
-.basic-card h3{
-    grid-column: 2/3;
-    align-self: flex-end;
 }
 .basic-card .purple{
     grid-row: 1/4;
     background-color:#6b21a8;
     border-radius: 8px 0  0 8px;
 }
-.basic-card p{
+.card-container{
     grid-column: 2/3;
-    grid-row: 2/3;
+    grid-row: 1/4;
+    display: grid;
+    padding:0.5rem;
+}
+.card-container h3{
+    grid-column: 2/3;
+    align-self: flex-end;
+    padding-bottom: 4px;
+}
+.card-container p{
+    padding: 0;
+    grid-column: 2/3;
+    align-self: flex-start;
+}
+.card-container div {
+    align-self: center;
+    justify-self: flex-end;
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+img{
+    width: 24px;
+    height: 24px;
+    padding: 0 0.5rem;
+}
+img:hover{
+    cursor: pointer;
+    transform: scale(1.25);
+}
+
+.trending  .user{
+    display: grid;
+    align-items: center;
+    padding: 0.5rem;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 50% 50%;
+}
+.trending h6{
+    align-self: flex-end;
+}
+.trending p{
+    font-size: 0.8rem;
+}
+.trending h6:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.trending  img{
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    width: 48px;
+    height: 48px;
 }
